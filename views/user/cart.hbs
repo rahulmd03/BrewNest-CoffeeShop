@@ -1,0 +1,43 @@
+<section style="margin-top:80px">
+    <div class="container">
+        {{#if products.length}}
+        <table class="table mt-5">
+            <thead>
+                <tr>
+                    <th scope="col">Item</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each products}}
+                <tr>
+
+                    <td><img style="width: 70px;height: 70px;" src="/product-images/{{this.product._id}}.jpg" alt="">
+                    </td>
+                    <td>{{this.product.Name}}</td>
+
+                    <td>
+                        <button class="cart-item-count mr-3"
+                            onclick="changeQuantity('{{this.productId}}', -1)">-</button>{{this.quantity}}<button
+                            class="cart-item-count ml-3" onclick="changeQuantity('{{this.productId}}', 1)">+</button>
+                    </td>
+                    <td>₹ {{this.product.Price}}</td>
+                    <td>₹ {{multiply this.quantity this.product.Price}}</td>
+                </tr>
+
+                {{/each}}
+            </tbody>
+        </table>
+        <hr>
+        <div class="float-right pr-5">
+            <h3 style="color:white">Total : ₹ {{total}} </h3><br>
+            <a href="/place-order" class="btn mt-3" style="width: 100%;"><b>Place Order</b></a> 
+            {{else}}
+            <h3 class="text-center" style="color: white;">Your cart is empty.</h3>
+        </div>
+        {{/if}}
+    </div>
+</section>

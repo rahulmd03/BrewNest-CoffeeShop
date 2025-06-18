@@ -1,0 +1,50 @@
+<section class="place-product-wrapper">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10 place-product-form">
+                <h2>Enter Delivery Details</h2>
+                <form action="/place-order" method="POST" id="checkout-form">
+                    <div class="row">
+
+                        <div class="col-md-6">
+
+                            <div>
+                                <label for="">Address</label>
+                                <input class="form-control" type="text" id="address" name="address" required>
+
+                                <label for="">Pincode</label>
+                                <input class="form-control" type="text" id="pincode" name="pincode" required>
+
+                                <label for="">Mobile</label>
+                                <input class="form-control" type="text" id="mobile" name="mobile" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6" style="margin-top: 10px;">
+                            <div>
+                                <h5>Total Amount : ₹ {{total}}</h5>
+                                <div class="payment">
+                                    <p>Payment method</p>
+                                    <label class="radio-inline">
+                                        <input type="radio" name="payment-method" value="COD">Cash on Delivery
+                                    </label>
+                                    <label class="radio-inline mt-2">
+                                        <input type="radio" name="payment-method" value="ONLINE">Online Payment
+                                    </label>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col text-center">
+                            <button class="btn" type="submit">Checkout</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</section>

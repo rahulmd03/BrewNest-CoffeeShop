@@ -1,0 +1,233 @@
+<!--home-->
+<section class="home" id="home">
+    <div class="content">
+        <h3>Welcome to Brew Nest</h3>
+        <p>Your cozy corner for artisan coffee and comfort.</p>
+        <a href="#menu" class="btn">Order Your Brew</a>
+    </div>
+</section>
+<!--home-->
+
+<!--about-->
+<section class="about" id="about">
+    <h1 class="heading"><span>About</span> us </h1>
+
+    <div class="row">
+        <div class="image">
+            <img src="./assets/img/about.jpg" alt="">
+        </div>
+        <div class="content">
+            <h3>Why Brew Nest Brews Stand Out?</h3>
+            <p>At Brew Nest, every cup tells a story — from handpicked beans to masterful brewing. We source only the
+                finest, ethically-grown coffee and roast it in small batches to unlock deep, complex flavors. It’s not
+                just coffee; it’s a crafted experience made with precision, passion, and a dash of love.</p>
+
+
+            <a href="" class="btn">Read More</a>
+        </div>
+    </div>
+</section>
+<!--about-->
+
+
+<!--menu-->
+<section class="menu" id="menu">
+    <h1 class="heading"> our <span>menu</span> </h1>
+    <div class="box-container mt-5">
+
+        {{#each products}}
+        <div class="box">
+            <img src="/product-images/{{this._id}}.jpg" alt="">
+            <h3>{{this.Name}}</h5>
+                <p>{{this.Description}}</p>
+                <div class="price">₹{{this.Price}}/-<span>₹ 199/-</span></div>
+                <button onclick="addToCart('{{this._id}}')" class="btn">Add to Cart</button>
+
+        </div>
+        {{/each}}
+
+    </div>
+    <!-- Buttons -->
+    <div class="menu-buttons">
+        <button class="view-more-btn" onclick="showMore()">View More</button>
+        <button class="view-less-btn" onclick="showLess()" style="display: none;">View Less</button>
+    </div>
+</section>
+<!--menu-->
+
+
+<!--service-->
+<section class="service" id="service">
+
+    <h1 class="heading"> our <span>Services</span></h1>
+    <div class="box-container">
+
+        <div class="box">
+            <div class="content">
+                <h3>Free Local Delivery</h3>
+                <div class="image">
+                    <img src="./assets/img/home-delivery.png" alt="">
+                    <p style="color: white; font-size: 15px; margin-top: 20px ;">Enjoy your favorite brews and snacks
+                        from the comfort of your home — with no delivery charges within the local area.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="content">
+                <h3>Event Catering</h3>
+                <div class="image">
+                    <img src="./assets/img/catering.png" alt="">
+                    <p style="color: white; font-size: 15px; margin-top: 20px ;">Elevate your meetings, parties, or
+                        events with our custom coffee and snack catering.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="content">
+                <h3>Eco-Friendly Packaging</h3>
+                <div class="image">
+                    <img src="./assets/img/eco-friendly.png" alt="">
+                    <p style="color: white; font-size: 15px; margin-top: 20px ;">We care for the planet — all our
+                        packaging is biodegradable and sustainable.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--service-->
+
+<!--review-->
+<section class="review" id="review">
+
+    <h1 class="heading"> customer's <span>review</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="./assets/img/quote-img.png" class="quote" alt="">
+            <p>The aroma, the ambiance, and the flavor—Brew Nest hits all the right notes! I love how fresh their coffee
+                tastes and the staff always greets you with a smile. It’s my go-to place every morning.</p>
+            <img src="./assets/img/riya.png" alt="" class="user">
+            <h3>Riya</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+        <div class="box">
+            <img src="./assets/img/quote-img.png" class="quote" alt="">
+            <p>Brew Nest makes every cup special! Whether it’s their classic lattes or the soothing herbal teas, the
+                quality is top-notch. Plus, their cozy interiors make it the perfect spot to unwind.</p>
+            <img src="./assets/img/john.png" alt="" class="user">
+            <h3>John</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+        <div class="box">
+            <img src="./assets/img/quote-img.png" class="quote" alt="">
+            <p>I stumbled upon Brew Nest and instantly fell in love! The snacks are delicious, and the coffee is
+                incredibly rich. You can tell they care about quality and customer experience. Highly recommended!</p>
+            <img src="./assets/img/emma.png" alt="" class="user">
+            <h3>emma watson</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+    </div>
+</section>
+<!--review-->
+
+<!--contact-->
+<section class="contact" id="contact">
+
+    <h1 class="heading"> contact <span>us</span> </h1>
+
+    <div class="row">
+        <iframe class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15249885.318783779!2d82.75252934999999!3d21.0680074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1747838691719!5m2!1sen!2sin"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+        <form action="/contact" method="POST">
+
+            <div class="inputBox">
+                <span class="fas fa-user"></span>
+                <input type="text" name="name" placeholder="name" required>
+            </div>
+            <div class="inputBox">
+                <span class="fas fa-envelope"></span>
+                <input type="email" name="email" placeholder="email" required>
+            </div>
+            <div class="inputBox">
+                <span class="fas fa-phone"></span>
+                <input type="number" name="phone" placeholder="phone no" required>
+            </div>
+            <div class="inputBox">
+                <span class="fas fa-comment"></span>
+                <input name="message" placeholder="your message..." required>
+            </div>
+            <input type="submit" value="contact now" class="btn">
+        </form>
+
+    </div>
+
+</section>
+<!--contact-->
+
+<!--gallery-->
+<section class="gallery" id="gallery">
+    <h1 class="heading"> Coffee <span>Gallery</span></h1>
+
+    <div class="gallery-grid">
+        <div class="gallery-item">
+            <img src="./assets/img/coffee1.jpg" alt="">
+        </div>
+        <div class="gallery-item">
+            <img src="./assets/img/coffee2.jpg" alt="">
+        </div>
+        <div class="gallery-item">
+            <img src="./assets/img/coffee3.jpg" alt="">
+        </div>
+        <div class="gallery-item">
+            <img src="./assets/img/coffee4.jpg" alt="">
+        </div>
+
+    </div>
+</section>
+<!--gallery-->
+
+<!--footer-->
+<section class="footer">
+
+    <div class="share">
+
+        <a href="https://github.com/rahulmd03" class="fa-brands fa-github"></a>
+        <a href="" class="fa-brands fa-linkedin"></a>
+    </div>
+
+    <div class="links">
+        <a href="#home">home</a>
+        <a href="#about">about</a>
+        <a href="#menu">menu</a>
+        <a href="#service">service</a>
+        <a href="#review">review</a>
+        <a href="#contact">contact</a>
+        <a href="#gallery">gallery</a>
+    </div>
+
+    <div class="foot"> <i class="far fa-copyright"></i> 2025 </div>
+</section>
+<!--footer-->

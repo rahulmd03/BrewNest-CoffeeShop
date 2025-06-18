@@ -1,0 +1,34 @@
+{{> admin-header}}
+
+<section style="margin-top:80px">
+  <div class="container">
+    {{#if orders.length}}
+    <table class="table mt-5">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Address</th>
+          <th>Total Amount</th>
+          <th>Payment</th>
+          <th>Status</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each orders}}
+        <tr>
+          <td>{{this._id}}</td>
+          <td>{{this.deliveryDetails.address}}</td>
+          <td>₹{{this.totalAmount}}</td>
+          <td>{{this.paymentMethod}}</td>
+          <td>{{this.status}}</td>
+          <td>{{this.date}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+    {{else}}
+    <h3 style="color: white;">No orders found.</h3>
+    {{/if}}
+  </div>
+</section>
