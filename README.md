@@ -35,14 +35,53 @@
 ![Admin Panel](/public/images/adminpage.png)
 
 > Watch how BrewNest works in action:  
-[Click here to watch the video](public/videos/BrewNest.mp4)
+[Click here to watch the video](BrewNest.mp4)
 
 ## 📦 Getting Started
 
-### 1. Clone the Repository
+Follow these steps to run the project locally:
+
+### ✅ Prerequisites
+
+- [Node.js & npm](https://nodejs.org/)
+- [MongoDB Community Server](https://www.mongodb.com/try/download/community)
+- Git installed
+
+---
+
+### 📁 1. Clone the Repository
 
 ```bash
 git clone https://github.com/rahulmd03/BrewNest-CoffeeShop.git
 cd BrewNest-CoffeeShop
+```
+
+### 📦 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### ⚙️ 3. Start MongoDB
+
+```bash
+mongod
+```
+
+### 🚀 4. Start the Application
+
+If you're using `nodemon` (recommended for development):
+
+```bash
+npx nodemon ./bin/www
+```
+
+Or if nodemon is installed globally:
+
+```bash
+nodemon ./bin/www
+```
+
+
 
 
